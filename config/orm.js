@@ -49,14 +49,15 @@ const orm = {
     });
   },
   create: function(table, cols, vals, cb) {
-    let queryString = "INSERT INTO " + table;
-
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
+    console.log(vals + " vals ")
+    let queryString = "INSERT INTO " + table + " (" + cols + ") VALUES ('" + vals + "');";
+    // let queryString = "INSERT INTO " + table;
+    // queryString += " (";
+    // queryString += cols.toString();
+    // queryString += ") ";
+    // queryString += "VALUES (";
+    // queryString += printQuestionMarks(vals.length);
+    // queryString += ") ";
 
     console.log(queryString);
 
