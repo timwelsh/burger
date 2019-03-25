@@ -48,7 +48,8 @@
             <ul class="list-group">
               {{#each burgers}}
                 <li class="list-group-item list-group-item-primary list-group-item-action">
-                  <p><strong>{{id}} . </strong></p> <h5>{{burger_name}}</h5>
+                  <span><h5>{{id}}. {{burger_name}}</h5></span>
+                  <div><button type="button" class="btn btn-primary clicked" id="{{id}}">Devour!</button></div>
                 </li>
               {{/each}}
             </ul>
